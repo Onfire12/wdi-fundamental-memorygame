@@ -10,6 +10,7 @@ header{
 	padding-bottom: 30px;
 	padding-right: 20px;
 	padding-left: 20px;
+	
 }
 
 nav{
@@ -53,6 +54,7 @@ h1{
 }
 
 #a1{
+	text-decoration: none;
 	font-family: "Raleway",sans-serif;
 	color:#f15b31;
 	letter-spacing: 1px;
@@ -61,6 +63,7 @@ h1{
 }
 
 #a2{
+	text-decoration: none;
 	font-family: "Raleway",sans-serif;
 	color:#0d2c40;
 	letter-spacing: 1px;
