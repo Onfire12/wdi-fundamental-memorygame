@@ -2,7 +2,6 @@
 console.log("up and running!");
 
 
-
 var cards=[
 	{rank:"queen",
 	 suit:"hearts",
@@ -24,47 +23,57 @@ var cards=[
 
 var cardsInPlay=[];
 
-var cardOne=cards[0];
-console.log(cardOne);
-cardsInPlay.push(cardOne);
-console.log("User flipped " + cardOne.rank);
-
-var cardTwo=cards[1];
-cardsInPlay.push(cardTwo);
-console.log("User flipped "  + cardTwo.rank);
-
-var cardThree=cards[2];
-cardsInPlay.push(cardThree);
-console.log("User flipped " + cardThree.rank);
-
-var cardFour=cards[3];
-cardsInPlay.push(cardFour);
-console.log("User flipped "  + cardFour.rank);
-console.log(cardsInPlay.rank);
-
-console.log(cardsInPlay.length);
-// if(cardsInPlay.length === 2){
-// 	alert("works!!")
-// }
-// else{
-// 	alert("Please try second time!")
-// };
 
 function checkformatch(){
 	if(cardsInPlay[0] === cardsInPlay[1]){
 		console.log("You found a match!");
+		alert("You found a match!!");
 	}
 	else{
-		console.log("Sorry, try again!")
+		console.log("Sorry, try again!");
+		alert("Sorry,try again");
 	}
 };
 
+function flipCard(){
+	cardID=this.getAttribute('data-id');
+	console.log(cardID);
+	cardsInPlay.push(cards[cardID].rank);
+	//display card front
+	//"this" keyword to access the card we click
+	this.setAttribute("src",cards[cardID].cardImage);
+	//access cardimage property
+	console.log(cards[cardID].cardImage);
+	console.log(cards[cardID].suit);
+	if(cardsInPlay.length === 2){
+		checkformatch();
+		cardsInPlay=[];
+	}
+}
+
+var createBoard = function(){
+	for(var i = 0; i < cards.length; i++){
+		//adding card image and id
+		var cardElement= document.createElement("img");
+		cardElement.setAttribute("src","file:///Users/zzhao/Downloads/images/back.png");
+		cardElement.setAttribute("data-id",i);
+		//finalizing the card
+		cardElement.addEventListener("click",flipCard);
+		document.getElementById("game-board").appendChild(cardElement);
+	}
+};
+
+createBoard();
 
 
-
-
-var card1=document.getElementById("C1");
-card1.addEventListener("click",function(){
-	console.log("you click Card1!!");
+//Define Reset button
+//refresh page
+// function reset(){
+// 		window.location.reload();
+// }
+var resetbutton=document.getElementById("button");
+resetbutton.addEventListener("click",function(){
+	window.location.reload();
 });
+
 

@@ -6,23 +6,24 @@ body{
 header{
 	background-color: #f15b31;
 	font-color:#ffffff;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	padding-right: 20px;
-	padding-left: 20px;
-	
+	padding:30px 20px;
 }
 
 nav{
 	background-color: #00a6b3;
 	font-color:#ffffff;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding:20px;
 }
 
 a{
-	margin-left: 20px;
-	margin-right: 20px;
+	margin:20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: "Raleway",sans-serif;
+	color:white;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 18px
 }
 
 a:hover{
@@ -32,55 +33,44 @@ a:hover{
 
 main{
 	width: 850px;
-	margin-top: 35px;
-	margin-bottom: 35px;
-	margin-left: auto;
-	margin-right: auto;
+	margin:35px auto;
 }
 
 img{
-	margin-top: 40px;
-	margin-right: 8px;
-	margin-left: 8px;
+	margin:40px 8px 8px;
 }
 
 h1{
 	font-family: "Raleway",sans-serif;
 	font-weight: 400;
-	color:#0d2c40;
+	color:white;
 	letter-spacing: 1px;
 	font-size: 45px;
 	margin: 0;
+	text-transform: uppercase;
 }
 
-#a1{
-	text-decoration: none;
-	font-family: "Raleway",sans-serif;
-	color:#f15b31;
-	letter-spacing: 1px;
-	font-weight: 600;
-	font-size: 18px
-}
-
-#a2{
-	text-decoration: none;
+h2{
 	font-family: "Raleway",sans-serif;
 	color:#0d2c40;
 	letter-spacing: 1px;
-	font-weight: 600;
-	font-size: 20px
+	font-size: 20px;
+	margin: 0;
+	text-transform: uppercase;
+	padding-bottom: 10px;
 }
 
 p{
 	font-family: "Droid Serif", serif;
 	line-height: 26px;
 	font-size: 18px;
+	
+	margin:auto;
 }
 
 footer{
 	text-transform: uppercase;;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding:20px;
 	background-color: #0d2c40;
 	color:white;
 	font-size: 14px;
